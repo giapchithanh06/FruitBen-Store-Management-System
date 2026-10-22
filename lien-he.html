@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="FruitBen - trái cây tươi nội địa và nhập khẩu, giao nhanh tận nhà." />
+    <meta name="author" content="Giáp Chí Thanh" />
+    <title>Liên hệ - FruitBen</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body data-trang="lien-he">
+    <!-- Header, banner, footer được chèn bởi assets/js/giao-dien.js -->
+    <main class="fb-main">
+        <div class="container">
+            <section class="fb-card fb-page-head">
+                <div>
+                    <span class="fb-eyebrow"><i class="fas fa-headset"></i> Hỗ trợ khách hàng</span>
+                    <h1>Liên hệ FruitBen</h1>
+                    <p>Cần tư vấn chọn trái cây, đặt giỏ quà hay đổi trả? Gửi lời nhắn, FruitBen phản hồi trong vòng 24 giờ.</p>
+                </div>
+            </section>
+
+            <div class="fb-info-grid mt-4">
+                <div class="fb-info"><i class="fas fa-map-marker-alt"></i><h3>Cửa hàng</h3><p>140 Lê Trọng Tấn, Phường Tây Thạnh, TP. Hồ Chí Minh</p></div>
+                <div class="fb-info"><i class="fas fa-phone"></i><h3>Hotline</h3><p>1900 1234<br />8:00 – 21:00 mỗi ngày</p></div>
+                <div class="fb-info"><i class="fas fa-envelope"></i><h3>Email</h3><p>fruitben@gmail.com</p></div>
+            </div>
+
+            <div class="fb-checkout mt-4">
+                <section class="fb-card fb-card-pad">
+                    <div class="fb-box-head">
+                        <div><span class="fb-eyebrow">Gửi phản hồi</span><h3 class="mt-2">Để lại lời nhắn cho chúng tôi</h3></div>
+                        <span class="fb-box-icon"><i class="fas fa-paper-plane"></i></span>
+                    </div>
+                    <div class="fb-note-box mb-3" id="daGui" style="background: var(--fb-green-soft); border-left-color: var(--fb-green); color: var(--fb-green-dark); font-weight: 600;" hidden></div>
+                    <form id="formLienHe" novalidate>
+                        <div class="form-row">
+                            <div class="col-md-6 fb-field">
+                                <label for="hoTen">Họ và tên <span class="req">*</span></label>
+                                <div class="fb-input-icon"><i class="far fa-user"></i><input class="fb-control" id="hoTen" name="hoTen" placeholder="Họ và tên của bạn" autocomplete="name" data-bat-buoc="Vui lòng nhập họ tên" data-nhieu-nhat="100" /></div>
+                                <span class="fb-error" data-loi-cho="hoTen"></span>
+                            </div>
+                            <div class="col-md-6 fb-field">
+                                <label for="email">Email <span class="req">*</span></label>
+                                <div class="fb-input-icon"><i class="far fa-envelope"></i><input class="fb-control" id="email" name="email" type="email" placeholder="ban@gmail.com" autocomplete="email" data-bat-buoc="Vui lòng nhập email" data-email="Email không đúng định dạng" /></div>
+                                <span class="fb-error" data-loi-cho="email"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 fb-field">
+                                <label for="soDienThoai">Số điện thoại</label>
+                                <div class="fb-input-icon"><i class="fas fa-phone"></i><input class="fb-control" id="soDienThoai" name="soDienThoai" placeholder="0901234567" inputmode="tel" data-mau="^0\d{9}$" data-mau-loi="Số điện thoại phải đủ 10 chữ số và bắt đầu bằng số 0!" /></div>
+                                <span class="fb-error" data-loi-cho="soDienThoai"></span>
+                            </div>
+                            <div class="col-md-6 fb-field">
+                                <label for="chuDe">Chủ đề <span class="req">*</span></label>
+                                <div class="fb-input-icon"><i class="fas fa-tag"></i><input class="fb-control" id="chuDe" name="chuDe" placeholder="Ví dụ: Đặt giỏ quà Tết" data-bat-buoc="Vui lòng nhập chủ đề" data-nhieu-nhat="150" /></div>
+                                <span class="fb-error" data-loi-cho="chuDe"></span>
+                            </div>
+                        </div>
+                        <div class="fb-field">
+                            <label for="tinNhan">Tin nhắn <span class="req">*</span></label>
+                            <textarea class="fb-control" id="tinNhan" name="tinNhan" rows="5" placeholder="Nội dung bạn cần hỗ trợ..." data-bat-buoc="Vui lòng nhập nội dung tin nhắn" data-it-nhat="10" data-it-nhat-loi="Tin nhắn cần ít nhất 10 ký tự" data-nhieu-nhat="1000"></textarea>
+                            <span class="fb-error" data-loi-cho="tinNhan"></span>
+                        </div>
+                        <button type="submit" class="fb-btn fb-btn-grad fb-btn-lg"><i class="fas fa-paper-plane"></i> Gửi lời nhắn</button>
+                    </form>
+                </section>
+
+                <aside class="fb-card fb-card-pad fb-sticky">
+                    <div class="fb-box-head"><h3>Câu hỏi thường gặp</h3><span class="fb-box-icon"><i class="fas fa-question"></i></span></div>
+                    <div class="fb-prose" style="font-size: .9rem;">
+                        <p><b>Bao lâu nhận được hàng?</b><br />Nội thành TP. Hồ Chí Minh giao trong ngày nếu đặt trước 16h; tỉnh khác 1–3 ngày.</p>
+                        <p><b>Trái bị dập thì sao?</b><br />Chụp ảnh và báo trong 24 giờ, FruitBen đổi mới hoặc hoàn tiền. <a href="chinh-sach-doi-tra.html">Xem chính sách đổi trả</a>.</p>
+                        <p class="mb-0"><b>Có xuất hoá đơn công ty không?</b><br />Có, ghi thông tin công ty ở ô Ghi chú khi đặt hàng.</p>
+                    </div>
+                    <div class="mt-3" style="overflow: hidden; border-radius: 5px; box-shadow: var(--fb-shadow);">
+                        <iframe title="Bản đồ cửa hàng FruitBen" src="https://www.google.com/maps?q=140+L%C3%AA+Tr%E1%BB%8Dng+T%E1%BA%A5n,+T%C3%A2y+Th%E1%BA%A1nh,+H%E1%BB%93+Ch%C3%AD+Minh&output=embed"
+                                width="100%" height="220" style="border: 0; display: block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/du-lieu-mau.js"></script>
+    <script src="assets/js/kho-du-lieu.js"></script>
+    <script src="assets/js/nghiep-vu.js"></script>
+    <script src="assets/js/giao-dien.js"></script>
+    <script src="assets/js/trang/noi-dung.js"></script>
+</body>
+</html>

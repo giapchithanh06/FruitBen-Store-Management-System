@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="FruitBen - trái cây tươi nội địa và nhập khẩu, giao nhanh tận nhà." />
+    <meta name="author" content="Giáp Chí Thanh" />
+    <title>Giỏ hàng - FruitBen</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body data-trang="gio-hang">
+    <!-- Header, banner, footer được chèn bởi assets/js/giao-dien.js -->
+    <main class="fb-main">
+        <div class="container">
+            <section class="fb-card fb-page-head">
+                <div>
+                    <span class="fb-eyebrow"><i class="fas fa-shopping-basket"></i> Giỏ hàng FruitBen</span>
+                    <h1>Giỏ hàng của bạn</h1>
+                    <p>Kiểm tra trái cây, số kg và tạm tính trước khi thanh toán.</p>
+                </div>
+                <div class="d-flex" style="gap: 10px;">
+                    <a class="fb-btn fb-btn-grad" id="nutXemDon" href="don-hang-cua-toi.html" hidden><i class="fas fa-receipt"></i> Xem đơn đã đặt</a>
+                    <a class="fb-btn fb-btn-soft" href="cua-hang.html"><i class="fas fa-arrow-left"></i> Tiếp tục mua sắm</a>
+                </div>
+            </section>
+
+            <div class="fb-steps">
+                <div class="fb-step hien-tai"><span class="so">1</span><div><strong>Giỏ hàng</strong><small>Kiểm tra sản phẩm</small></div></div>
+                <div class="fb-step"><span class="so">2</span><div><strong>Thông tin</strong><small>Giao hàng &amp; thanh toán</small></div></div>
+                <div class="fb-step"><span class="so">3</span><div><strong>Hoàn tất</strong><small>Xác nhận đơn</small></div></div>
+            </div>
+
+            <div id="noiDungGio"></div>
+        </div>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/du-lieu-mau.js"></script>
+    <script src="assets/js/kho-du-lieu.js"></script>
+    <script src="assets/js/nghiep-vu.js"></script>
+    <script src="assets/js/giao-dien.js"></script>
+    <script src="assets/js/trang/gio-hang.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="188" height="50">
+  <!-- Logo FruitBen theo kiểu Fruitkha: thùng trái cây nét cam + chữ cam -->
+  <g fill="none" stroke="#F28123" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="22" cy="24" r="8"/>
+    <circle cx="38" cy="18" r="9"/>
+    <circle cx="54" cy="24" r="8"/>
+    <path d="M38 9 q3 -7 10 -7"/>
+    <path d="M6 34 h64 l-6 38 h-52 z"/>
+    <path d="M14 46 h48 M16 58 h44"/>
+  </g>
+  <text x="84" y="44" font-family="'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="36" fill="#F28123">FruitBen</text>
+  <text x="86" y="66" font-family="'Open Sans', 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="15" fill="#F28123" opacity=".85">Fresh Fruits Online</text>
+</svg>

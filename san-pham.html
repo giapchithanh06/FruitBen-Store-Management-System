@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="FruitBen - trái cây tươi nội địa và nhập khẩu, giao nhanh tận nhà." />
+    <meta name="author" content="Giáp Chí Thanh" />
+    <title>Chi tiết sản phẩm - FruitBen</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body data-trang="san-pham" data-banner="Xem thêm chi tiết" data-banner-tieu-de="Chi tiết sản phẩm">
+    <!-- Header, banner, footer được chèn bởi assets/js/giao-dien.js -->
+    <main class="fb-main">
+        <div class="container">
+            <nav class="fb-breadcrumb" id="duongDan" aria-label="Đường dẫn"></nav>
+
+            <!-- 1. ẢNH + THÔNG TIN MUA -->
+            <section class="fb-card fb-detail">
+                <div>
+                    <div class="fb-gallery-main">
+                        <img id="anhChinh" src="" alt="" />
+                        <span id="nhanAnh"></span>
+                    </div>
+                    <div class="fb-thumbs" id="thuVienAnh"></div>
+                </div>
+                <div class="fb-detail-info">
+                    <div class="fb-detail-top" id="dauThongTin"></div>
+                    <h1 id="tenSP"></h1>
+                    <p class="text-muted mb-2" style="font-size: .88rem;" id="daBan"></p>
+                    <div class="fb-detail-price" id="giaSP"></div>
+                    <p style="color: #555;" id="moTaNgan"></p>
+
+                    <form id="formMua">
+                        <div class="fb-qty-box">
+                            <div><strong>Số lượng (kg)</strong><small id="ghiChuSoLuong"></small></div>
+                            <div class="fb-qty" data-qty>
+                                <button type="button" data-step="-1" aria-label="Giảm">−</button>
+                                <input type="number" name="soLuong" id="soLuong" value="1" min="1" aria-label="Số kg" />
+                                <button type="button" data-step="1" aria-label="Tăng">+</button>
+                            </div>
+                        </div>
+                        <div class="fb-buy-row">
+                            <button type="submit" name="themGio" class="fb-btn fb-btn-grad fb-btn-lg"><i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+                            <button type="submit" name="muaNgay" class="fb-btn fb-btn-soft fb-btn-lg">Mua ngay <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </form>
+
+                    <ul class="fb-promise">
+                        <li><i class="fas fa-shipping-fast"></i> Miễn phí giao hàng cho đơn từ 500.000đ</li>
+                        <li><i class="fas fa-undo-alt"></i> Đổi trái dập, hỏng trong 24 giờ sau khi nhận</li>
+                        <li><i class="fas fa-leaf"></i> Bảo quản lạnh từ kho đến tay bạn</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 2. TAB MÔ TẢ / THÔNG TIN / BẢO QUẢN -->
+            <section class="fb-card fb-tabs mt-4 reveal">
+                <ul class="nav" role="tablist">
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tabMoTa" role="tab">Mô tả</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tabThongTin" role="tab">Thông tin</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tabBaoQuan" role="tab">Bảo quản</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tabMoTa" role="tabpanel"><p class="mb-0" style="white-space: pre-line;" id="tabMoTaNoiDung"></p></div>
+                    <div class="tab-pane fade" id="tabThongTin" role="tabpanel"><table class="fb-spec" id="bangThongTin"></table></div>
+                    <div class="tab-pane fade" id="tabBaoQuan" role="tabpanel">
+                        <ul class="mb-0">
+                            <li>Rửa sạch ngay trước khi ăn, không rửa trước khi cất tủ lạnh để trái không bị úng.</li>
+                            <li>Trái mềm (dâu, nho, việt quất) để ngăn mát 2–5°C, dùng trong 3–4 ngày.</li>
+                            <li>Trái cứng (táo, lê, cam) để nơi thoáng mát hoặc ngăn mát, dùng trong 1–2 tuần.</li>
+                            <li>Trái nhiệt đới chưa chín (xoài, bơ, sầu riêng) để ở nhiệt độ phòng cho chín tự nhiên.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SẢN PHẨM CÙNG LOẠI -->
+            <section class="fb-section reveal" id="khuLienQuan">
+                <div class="fb-section-head">
+                    <div><span class="fb-eyebrow">Gợi ý cho bạn</span><h2 id="tieuDeLienQuan"></h2></div>
+                    <a class="fb-btn fb-btn-grad" id="xemCungLoai" href="cua-hang.html">Xem tất cả</a>
+                </div>
+                <div class="fb-products" id="dsLienQuan"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/du-lieu-mau.js"></script>
+    <script src="assets/js/kho-du-lieu.js"></script>
+    <script src="assets/js/nghiep-vu.js"></script>
+    <script src="assets/js/giao-dien.js"></script>
+    <script src="assets/js/trang/san-pham.js"></script>
+</body>
+</html>

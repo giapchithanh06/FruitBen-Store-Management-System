@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="FruitBen - trái cây tươi nội địa và nhập khẩu, giao nhanh tận nhà." />
+    <meta name="author" content="Giáp Chí Thanh" />
+    <title>Cửa hàng - FruitBen</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body data-trang="cua-hang">
+    <!-- Header, banner, footer được chèn bởi assets/js/giao-dien.js -->
+    <main class="fb-main">
+        <div class="container">
+            <!-- 1. ĐẦU TRANG -->
+            <section class="fb-card fb-page-head">
+                <div>
+                    <span class="fb-eyebrow"><i class="fas fa-store"></i> Cửa hàng FruitBen</span>
+                    <h1>Trái cây tươi mỗi ngày</h1>
+                    <p>Chọn theo loại, khoảng giá hoặc ưu đãi. Giá niêm yết theo kg, cân đủ, đổi ngay nếu trái không đạt.</p>
+                </div>
+            </section>
+
+            <!-- 2. VỪA CẬP KHO: dải ngang cuộn -->
+            <section class="fb-section reveal" id="khuHangMoi">
+                <div class="fb-section-head">
+                    <div><span class="fb-eyebrow">Hàng mới</span><h2>Vừa cập kho</h2></div>
+                    <div class="fb-strip-btns">
+                        <button type="button" data-strip-target="dsHangMoi" data-dir="-1" aria-label="Cuộn trái"><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" data-strip-target="dsHangMoi" data-dir="1" aria-label="Cuộn phải"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="fb-strip" id="dsHangMoi"></div>
+            </section>
+
+            <!-- 3. BỘ LỌC + DANH SÁCH -->
+            <section class="fb-section fb-shop" id="danhSach">
+                <form class="fb-card fb-filter" id="formLoc">
+                    <input type="hidden" name="tuKhoa" />
+                    <div class="fb-filter-head">
+                        <span><i class="fas fa-filter"></i> Bộ lọc</span>
+                        <a href="cua-hang.html#danhSach" id="xoaLoc" hidden><i class="fas fa-undo-alt"></i> Xoá lọc</a>
+                    </div>
+                    <div class="fb-filter-group">
+                        <label class="fb-label"><i class="fas fa-th-large"></i> Danh mục</label>
+                        <div class="fb-chip-list" id="chipLoai"></div>
+                    </div>
+                    <div class="fb-filter-group">
+                        <label class="fb-label d-flex justify-content-between" for="giaToiDa">
+                            <span><i class="fas fa-tags"></i> Giá tối đa / kg</span>
+                            <span class="fb-range-value" id="nhanGia"></span>
+                        </label>
+                        <input type="range" class="fb-range" id="giaToiDa" name="giaToiDa" min="10000" step="10000" />
+                        <div class="d-flex justify-content-between" style="font-size: .75rem; color: var(--fb-muted);"><span>10.000đ</span><span id="giaMaxNhan"></span></div>
+                        <button type="submit" class="fb-btn fb-btn-soft fb-btn-sm fb-btn-block mt-2">Áp dụng giá</button>
+                    </div>
+                    <div class="fb-filter-group">
+                        <label class="fb-label" for="sapXep"><i class="fas fa-sort-amount-down"></i> Sắp xếp</label>
+                        <select id="sapXep" name="sapXep" class="fb-control" data-tu-ap-dung></select>
+                    </div>
+                    <div class="fb-filter-group">
+                        <label class="fb-check" for="giamGia">
+                            <input type="checkbox" id="giamGia" name="giamGia" value="true" data-tu-ap-dung />
+                            <span><i class="fas fa-fire" style="color: var(--fb-red);"></i> Chỉ hàng đang giảm giá</span>
+                        </label>
+                    </div>
+                </form>
+
+                <div style="min-width: 0;">
+                    <div class="fb-card fb-sale-box reveal" id="hopSale">
+                        <h3><i class="fas fa-fire"></i> Đang giảm giá</h3>
+                        <div class="fb-products cot-3" id="dsSaleBox"></div>
+                    </div>
+                    <div class="fb-toolbar">
+                        <div class="mr-auto">
+                            <span class="fb-eyebrow" id="nhanDanhSach">Danh sách sản phẩm</span>
+                            <h2 id="tieuDeDanhSach">Tất cả trái cây</h2>
+                        </div>
+                        <span class="fb-count-pill"><i class="fas fa-apple-alt" style="color: var(--fb-orange);"></i> <b id="tongSo">0</b> sản phẩm</span>
+                    </div>
+                    <div class="fb-active-filters" id="locDangDung"></div>
+                    <div id="dsSanPham"></div>
+                    <ul class="fb-pagination" id="phanTrang" aria-label="Phân trang"></ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/du-lieu-mau.js"></script>
+    <script src="assets/js/kho-du-lieu.js"></script>
+    <script src="assets/js/nghiep-vu.js"></script>
+    <script src="assets/js/giao-dien.js"></script>
+    <script src="assets/js/trang/cua-hang.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="FruitBen - trái cây tươi nội địa và nhập khẩu, giao nhanh tận nhà." />
+    <meta name="author" content="Giáp Chí Thanh" />
+    <title>Hướng dẫn thanh toán - FruitBen</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body data-trang="huong-dan-thanh-toan">
+    <!-- Header, banner, footer được chèn bởi assets/js/giao-dien.js -->
+    <main class="fb-main">
+        <div class="container">
+            <section class="fb-card fb-page-head">
+                <div>
+                    <span class="fb-eyebrow"><i class="fas fa-wallet"></i> Hướng dẫn</span>
+                    <h1>Thanh toán đơn hàng</h1>
+                    <p>FruitBen nhận thanh toán khi nhận hàng (COD) hoặc chuyển khoản bằng mã QR.</p>
+                </div>
+            </section>
+            <div class="fb-checkout mt-4">
+                <section class="fb-card fb-card-pad">
+                    <div class="fb-prose">
+                        <h2><i class="fas fa-money-bill-wave" style="color: var(--fb-orange);"></i> Thanh toán khi nhận hàng (COD)</h2>
+                        <p>Trả tiền mặt cho nhân viên giao hàng sau khi kiểm tra trái cây. Đơn được tính là đã thanh toán khi chuyển sang trạng thái “Hoàn thành”.</p>
+                        <h2><i class="fas fa-qrcode" style="color: var(--fb-orange);"></i> Chuyển khoản QR</h2>
+                        <ol>
+                            <li>Ở trang Thanh toán, chọn “Chuyển khoản bằng mã QR” rồi bấm Đặt hàng.</li>
+                            <li>Trang hoàn tất hiện mã VietQR đã có sẵn số tiền và nội dung <b>FRUITBEN FBxxxxx</b>.</li>
+                            <li>Mở app ngân hàng hoặc ví điện tử, quét mã và xác nhận chuyển.</li>
+                            <li>FruitBen đối soát và xác nhận thanh toán, đơn chuyển sang “Đang giao”.</li>
+                        </ol>
+                        <p>Bạn có thể xem lại mã QR bất cứ lúc nào trong mục <a href="don-hang-cua-toi.html">Đơn hàng của tôi</a>.</p>
+                        <h2><i class="fas fa-ticket-alt" style="color: var(--fb-orange);"></i> Mã giảm giá</h2>
+                        <p>Nhập mã ở ô “Mã giảm giá” trong trang Thanh toán và bấm Áp dụng. Mỗi mã có điều kiện đơn tối thiểu, hạn dùng và số lượt riêng; huỷ đơn thì lượt dùng được hoàn lại.</p>
+                    </div>
+                </section>
+                <aside class="fb-card fb-card-pad fb-sticky">
+                    <div class="fb-box-head"><h3>Tài khoản nhận</h3><span class="fb-box-icon"><i class="fas fa-university"></i></span></div>
+                    <div class="fb-qr" style="grid-template-columns: 1fr;">
+                        <dl>
+                            <dt>Ngân hàng</dt><dd data-cau-hinh="QR_TEN_NGAN_HANG"></dd>
+                            <dt>Số tài khoản</dt><dd><span data-cau-hinh="QR_SO_TAI_KHOAN"></span> <button type="button" class="fb-copy" data-copy="0123456789">Chép</button></dd>
+                            <dt>Chủ tài khoản</dt><dd data-cau-hinh="QR_TEN_TAI_KHOAN"></dd>
+                        </dl>
+                    </div>
+                    <div class="fb-note-box mt-3"><i class="fas fa-info-circle"></i> Luôn ghi đúng nội dung chuyển khoản theo mã đơn để được xác nhận nhanh.</div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/du-lieu-mau.js"></script>
+    <script src="assets/js/kho-du-lieu.js"></script>
+    <script src="assets/js/nghiep-vu.js"></script>
+    <script src="assets/js/giao-dien.js"></script>
+    <script src="assets/js/trang/noi-dung.js"></script>
+</body>
+</html>
