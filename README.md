@@ -393,7 +393,7 @@ This project was developed for educational purposes to practice:
 
 **Giáp Chí Thanh**
 
-Student Project – FruitBen Fruit Store E-commerce Website
+Student Project – FruitBen Fruit Store E-commerce Website.
 
 ## 📄 License
 
